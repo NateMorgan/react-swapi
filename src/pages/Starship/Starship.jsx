@@ -31,7 +31,7 @@ const StarshipList = () => {
       </div>
         :
         <>
-          <p>Loading Starships...</p>
+          <p style={{margin:"60px 0 0 10px"}}>Loading Starships...</p>
         </>
       }
     </>
