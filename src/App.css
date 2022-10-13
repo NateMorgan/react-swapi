@@ -42,3 +42,7 @@
     transform: rotate(360deg);
   }
 }
+
+a:hover{
+  color:grey !important;
+}
