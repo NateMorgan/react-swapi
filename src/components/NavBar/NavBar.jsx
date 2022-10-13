@@ -2,7 +2,7 @@ import "./NavBar.css"
 
 const NavBar = () => {
   return ( 
-  <nav className="navbar" style={{backgroundColor:"black",color:"white"}}>
+  <nav className="navbar fixed-top" style={{backgroundColor:"black",color:"white"}}>
     <div className="container-fluid">
       <h3>Star Wars Starships</h3>
       <form class="d-flex" role="search">
