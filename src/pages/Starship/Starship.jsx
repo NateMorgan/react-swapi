@@ -22,7 +22,7 @@ const StarshipList = () => {
       {starships.length ?
       <div id="ship-container">
         {starships.map(ship =>
-          <div className="card m-5 text-bg-dark text-center">
+          <div className="card m-5 text-center" style={{backgroundColor: "black", color:"white"}}>
             <div className="card-body">
               <p> {ship.name} </p>
             </div>
