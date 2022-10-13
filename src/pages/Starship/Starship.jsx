@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react"
 import { getStarshipList } from "../../services/sw-api"
+import './Starship.css';
+import { Link } from "react-router-dom"
 
 const StarshipList = () => {
   const [starships, setStarships] = useState([])
@@ -7,7 +9,6 @@ const StarshipList = () => {
   useEffect(() => {
     const fetchStarshipList = async (recursive)=> {
       const starshipData = await getStarshipList(recursive ? recursive: '')
-      console.log(starshipData)
       setStarships(starships => [...starships, ...starshipData.results])
       if(starshipData.next !== null){
         fetchStarshipList(starshipData.next.split('/starships/')[1])
@@ -19,11 +20,15 @@ const StarshipList = () => {
   return(
     <>
       {starships.length ?
-        <ul>
-          {starships.map(ship =>
-            <li> {ship.name} </li>
-          )}
-        </ul>
+      <div id="ship-container">
+        {starships.map(ship =>
+          <div className="card m-5 text-bg-dark text-center">
+            <div className="card-body">
+              <p> {ship.name} </p>
+            </div>
+          </div>
+        )}
+      </div>
         :
         <>
           <p>Loading Starships...</p>
