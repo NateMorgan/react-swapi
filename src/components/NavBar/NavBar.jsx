@@ -8,10 +8,10 @@ const NavBar = () => {
       <Link to='' style={{textDecoration:"none", color:"white"}}>
         <h3>Star Wars Starships</h3>
       </Link>
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+      <form className="d-flex" role="search">
+        <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
         <Link to='/search'>
-          <button class="btn btn-outline-success" type="submit" style={{color:"white",borderColor:"white"}}>Search</button>
+          <button className="btn btn-outline-success" type="submit" style={{color:"white",borderColor:"white"}}>Search</button>
         </Link>
       </form>
     </div>

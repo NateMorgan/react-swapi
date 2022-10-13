@@ -44,5 +44,11 @@
 }
 
 a:hover{
-  color:grey !important;
+  color:coral !important;
+}
+
+button:hover{
+  color: coral !important;
+  border-color: coral !important;
+  background-color: black !important;
 }
