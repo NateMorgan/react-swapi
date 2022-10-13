@@ -19,14 +19,14 @@ const StarshipList = () => {
   return(
     <>
       {starships.length ?
-        <>
+        <ul>
           {starships.map(ship =>
             <li> {ship.name} </li>
           )}
-        </>
+        </ul>
         :
         <>
-          <p>Loading Starships</p>
+          <p>Loading Starships...</p>
         </>
       }
     </>
