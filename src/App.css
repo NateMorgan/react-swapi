@@ -2,17 +2,6 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -24,23 +13,10 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
 #nav-bar{
   background-color: black;
   color: white;
   text-align: center;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
 
 a:hover{
@@ -51,4 +27,39 @@ button:hover{
   color: coral !important;
   border-color: coral !important;
   background-color: black !important;
+}
+
+p{
+  font-size: 1.5rem;
+}
+
+#ship-container{
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+#card{
+  background-color: grey;
+}
+
+@media only screen and (min-width: 450px) {
+  #ship-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+
+@media only screen and (min-width: 700px) {
+  #ship-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  #ship-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }

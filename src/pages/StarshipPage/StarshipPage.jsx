@@ -13,7 +13,7 @@ const StarshipPage = (props) => {
           <br />
           <h3> MODEL: {location.state.ship.model} </h3>
           <br />
-          <Link to='../' style={{
+          <Link to='/' style={{
                 textDecoration:"none", 
                 color: "white"}}>
             <h4> RETURN </h4>

@@ -11,7 +11,7 @@ function App() {
     <>
       <NavBar/>
       <Routes>
-        <Route path=''          element={<StarshipList/>}/>
+        <Route path='/'          element={<StarshipList/>}/>
         <Route path='/starship' element={<StarshipPage/>}/>
         <Route path='/search'   element={<SearchRes/>}/>
       </Routes>
