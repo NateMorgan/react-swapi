@@ -1,10 +1,12 @@
-import { useEffect, useState } from "react"
+import { useEffect, useState, useMemo } from "react"
 import { getStarshipList } from "../../services/sw-api"
 import { Link } from "react-router-dom"
 
-const StarshipList = () => {
+const StarshipList = (props) => {
   const [starships, setStarships] = useState([])
-  
+
+  let filtered = starships.filter(ship => ship.name.toLowerCase().includes(props.query))
+
   useEffect(() => {
     const fetchStarshipList = async (recursive)=> {
       const starshipData = await getStarshipList(recursive ? recursive: '')
@@ -20,7 +22,7 @@ const StarshipList = () => {
     <>
       {starships.length ?
       <div id="ship-container">
-        {starships.map(ship =>
+        {filtered.map(ship =>
           <div className="card m-5 text-center" style={{backgroundColor: "black"}}>
             <Link to='/starship' state={{ship}} key={ship.name} style={{textDecoration:"none", color:"white"}}>
               <div className="card-body">
