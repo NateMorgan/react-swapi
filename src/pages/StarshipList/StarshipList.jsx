@@ -1,4 +1,4 @@
-import { useEffect, useState, useMemo } from "react"
+import { useEffect, useState } from "react"
 import { getStarshipList } from "../../services/sw-api"
 import { Link } from "react-router-dom"
 
